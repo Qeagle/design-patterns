@@ -14,23 +14,7 @@ This repository contains implementations of key design patterns tailored for tes
 | **Object Pool Pattern**| A creational pattern that manages a pool of reusable objects to reduce the cost of object creation.          | 1. Reusing WebDriver instances with unique capabilities for parallel tests.<br>2. Managing a pool of database connections in load testing. | Define a pool manager class with methods to `getObject()` and `releaseObject()`. Example: `WebDriverPool.getDriver()`. | - Improves performance.<br>- Optimizes resource usage.<br>- Ensures object reuse in high-demand scenarios. |
 | **Decorator Pattern**  | A structural pattern that dynamically adds new behavior to objects by wrapping them in decorator classes.    | 1. Adding logging or screenshot-taking functionality to WebDriver actions.<br>2. Extending retry logic dynamically for flaky environments. | Create individual decorator classes that wrap the base class. Stack multiple decorators for combined behaviors. Example: `new SnapshotDecorator(new LoggingDecorator(driver))`. | - Provides flexibility in adding features.<br>- Promotes composition over inheritance.<br>- Reuses common behaviors. |
 
----
 
-## **Repository Structure**
-
-- **src/main/java/patterns/factory/**  
-  Contains the implementation of the **Factory Pattern**, including examples for generating WebDriver instances and API clients.
-
-- **src/main/java/patterns/builder/**  
-  Contains the implementation of the **Builder Pattern**, showcasing how to chain Selenium Actions and construct configurable Page Objects.
-
-- **src/main/java/patterns/objectpool/**  
-  Contains the implementation of the **Object Pool Pattern**, including a pool manager for reusing WebDriver instances and managing resources.
-
-- **src/main/java/patterns/decorator/**  
-  Contains the implementation of the **Decorator Pattern**, with examples for adding logging, retry logic, and screenshot-taking functionality to WebDriver actions.
-
----
 
 ## **Getting Started**
 
